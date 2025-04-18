@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Set-up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('images/streaming-setup.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        header {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        .container {
+            padding: 80px;
+            background-color: rgba(18, 18, 18, 0.9);
+            border-radius: 10px;
+            margin: 0px auto;
+            max-width: 2000px;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .component {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-shadow: 0 0 10px #00eaff;
+            margin-bottom: 20px;
+        }
+
+        .component img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .component hr {
+            border: 1px solid #00eaff;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #00eaff;
+            text-shadow: 0 0 5px #00eaff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(37, 37, 37, 0.8);
+            padding: 10px;
+            box-shadow: 0 0 10px #00eaff;
+        }
+
+        nav a {
+            color: #00eaff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #00eaff;
+            text-shadow: 0 0 5px #00eaff;
+        }
+    </style>
+</head>
+<body>
+    <header>STREAMING SET-UP</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Services.html">Services</a>
+    </nav>
+    <div class="container">
+        <h2>Component List</h2>
+        
+        <div class="components-grid">
+            <div class="component">
+                <h3>Motherboard: Gigabyte B660M AORUS PRO DDR4</h3>
+                <img src="images/B660M-MOBO.png" alt="Gigabyte B660M AORUS PRO DDR4">
+                <hr>
+                <p>Gigabyte B660M AORUS PRO DDR4 is a reliable motherboard with solid power delivery and PCIe 4.0 support, ideal for mid-range streaming builds</p>
+            </div>
+
+            <div class="component">
+                <h3>Intel Core i7-12700K</h3>
+                <img src="images/i7-12700K.png" alt="Intel Core i7-12700K">
+                <hr>
+                <p>Powerful 12-core CPU with excellent multitasking and single-thread performance, perfect for gaming and streaming simultaneously.</p>
+            </div>
+
+            <div class="component">
+                <h3>Intel Arc B580 | 12GB GDDR6 VRAM</h3>
+                <img src="images/Intel Arc B580.png" alt="Intel Arc B580">
+                <hr>
+                <p>A capable GPU for mid-tier gaming and streaming, though it’s less established compared to NVIDIA's and AMD's offerings.</p>
+            </div>
+
+            <div class="component">
+                <h3>32GB-3200MHz TEAM GROUP - T-FORCE VULCAN DDR4 RAM</h3>
+                <img src="images/DDR4_TFORCE.png" alt="32GB-3200MHz TEAM GROUP - T-FORCE VULCAN DDR4 RAM">
+                <hr>
+                <p>Large and quick RAM, allowing for efficient multitasking and operation of demanding streaming software.</p>
+            </div>
+
+            <div class="component">
+                <h3>1TB Kingston NV3-Gen4 NVMe M.2 SSD</h3>
+                <img src="images/kingston1tbnv3.png" alt="1TB Kingston NV3-Gen4 NVMe M.2 SSD | PCIE 4.0">
+                <hr>
+                <p>Fast SSD provides rapid load times and high-speed storage, providing smooth gameplay and instant access to streaming data.</p>
+            </div>
+
+            <div class="component">
+                <h3>Gigabyte P650G 80 Plus Gold 650W</h3>
+                <img src="E:/html/HTML-211/images/P650G.png" alt="Gigabyte P650G 80 Plus Gold 650W">
+                <hr>
+                <p>Gigabyte P650G 80 Plus Gold 650W is an efficient PSU that offers plenty of headroom for a stable and reliable power supply during demanding streaming sessions.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <p span class="highlight"> This build is great for streaming, as the Intel Core i7-12700K can handle both gaming and streaming tasks smoothly. With 32GB of RAM a fast Gen4 NVMe SSD, and a 12GB Intel Arc GPU, it delivers reliable multitasking performance. All components are efficiently powered by a 650W 80+ Gold PSU.</span> </p>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/techbg2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            background: linear-gradient(to right, #0a0a0a, #1e1e1e);
+            padding: 50px;
+            text-align: center;
+            font-size: 27px;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-shadow: 0 0 4px cyan;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            box-shadow: 0 0 3px cyan;
+        }
+
+        nav a {
+            color: #00eaff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: 0.3s;
+            font-weight: normal;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 3px #ff00ff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .form-group {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #00eaff;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .submit-btn {
+            background-color: #00eaff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #00a3cc;
+        }
+
+        .result-container {
+            margin-top: 50px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .component-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #00eaff;
+            box-shadow: 0 0 10px #00eaff;
+        }
+
+        .component-box img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #00eaff;
+        }
+
+        .component-box p {
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        PC Builder
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="neon-text">Build Your Custom PC</h1>
+		<h3 align="center"> <b>Note:</b> Please check the compatibility of the components before building and buying the visualized/plan built pc </h3>
+        <h3> <b>FOR BEGINNERS</b> AM4/5 is for AMD CPU's and LGA Sockets is for Intel CPU's </h3>
+		<form id="pcBuilderForm">
+            <div class="form-group">
+                <label for="motherboard">Motherboard</label>
+                <select id="motherboard" name="motherboard" onchange="updateImage('motherboard')">
+                    <option value="">Select Motherboard</option>
+                    <option value="mb1" data-image="Motherboards/B450M PRO-M2 MAX.png">B450M PRO-M2 MAX (AM4 SOCKET)</option>
+                    <option value="mb2" data-image="Motherboards/Gigabyte B660M DS3H.png">Gigabyte B660M DS3H (LGA 1700 SOCKET)</option>
+                    <option value="mb3" data-image="Motherboards/ASRock B550M Pro4.png">ASRock B550M Pro4 (AMD B550 AM4 Socket)</option>
+                    <option value="mb4" data-image="Motherboards/Gigabyte B660M AORUS PRO DDR4.png">Gigabyte B660M AORUS PRO DDR4 (LGA 1700 SOCKET)</option>
+                    <option value="mb5" data-image="Motherboards/Gigabyte B550 AORUS ELITE V2.png">Gigabyte B550 AORUS ELITE V2 (AMD Socket AM4)</option>
+                    <option value="mb6" data-image="Motherboards/ASRock B560M-HDV.png">ASRock B560M-HDV (LGA 1200 SOCKET)</option>
+                    <option value="mb7" data-image="Motherboards/ASUS PRIME B460M-A.png">ASUS PRIME B460M-A (LGA 1200 SOCKET)</option>
+                    <option value="mb8" data-image="Motherboards/MSI B450M PRO-VDH MAX.png">MSI B450M PRO-VDH MAX (AM4 SOCKET)</option>
+                    <option value="mb9" data-image="Motherboards/MSI B550M PRO-VDH WIFI.png">MSI B550M PRO-VDH WIFI (AM4 SOCKET</option>
+                    <option value="mb10" data-image="Motherboards/Gigabyte B760M DS3H DDR5.png">Gigabyte B760M DS3H DDR5 (LGA1700 socket)</option>
+					<option value="mb11" data-image="Motherboards/MSI PRO X670-P WiFi.png">MSI PRO X670-P WiFi (AM5 SOCKET) </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="psu">PSU</label>
+                <select id="psu" name="psu" onchange="updateImage('psu')">
+                    <option value="">Select PSU</option>
+                    <option value="psu1" data-image="PSU/Corsair CX 550W PSU.png">Corsair CX 550W PSU</option>
+                    <option value="psu2" data-image="PSU/EVGA 550W PSU.png">EVGA 550W PSU</option>
+                    <option value="psu3" data-image="PSU/P750GM GIGABYTE PSU.png">P750GM GIGABYTE PSU</option>
+                    <option value="psu4" data-image="PSU/Gigabyte P650G.png">Gigabyte P650G</option>
+                    <option value="psu5" data-image="PSU/ROG STRIX 1000W Gold.png">ROG STRIX 1000W Gold</option>
+                    <option value="psu6" data-image="PSU/CORSAIR RM1000X.png">CORSAIR RM1000X</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cpu">CPU</label>
+                <select id="cpu" name="cpu" onchange="updateImage('cpu')">
+                    <option value="">Select CPU</option>
+                    <option value="cpu1" data-image="CPU/AMD Ryzen 5 5600G.png">AMD Ryzen 5 5600G</option>
+                    <option value="cpu2" data-image="CPU/Intel Core i5-12400F.png">Intel Core i5-12400F</option>
+                    <option value="cpu3" data-image="CPU/AMD Ryzen 7 5800X.png">AMD Ryzen 7 5800X</option>
+                    <option value="cpu4" data-image="CPU/Intel Core i7-12700K.png">Intel Core i7-12700K</option>
+                    <option value="cpu5" data-image="CPU/AMD Ryzen 9 5900X.png">AMD Ryzen 9 5900X</option>
+                    <option value="cpu6" data-image="CPU/AMD Ryzen 9 7950X.png">AMD Ryzen 9 7950X</option>
+					<option value="cpu6" data-image="CPU/Intel Core i5 13600K.png">Intel Core i5 13600K</option>
+					<option value="cpu6" data-image="CPU/Intel Core i5-12400F.png">Intel Core i5-12400F</option>
+					<option value="cpu6" data-image="CPU/Intel Core i7 10700.png">Intel Core i7 10700</option>					
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gpu">GPU</label>
+                <select id="gpu" name="gpu" onchange="updateImage('gpu')">
+                    <option value="">Select GPU</option>
+                    <option value="gpu1" data-image="GPU/GTX 1660 Ti GDDR6.png">GTX 1660 Ti 6GB GDDR6</option>
+                    <option value="gpu2" data-image="GPU/NVIDIA RTX 3050 8GB.png">NVIDIA RTX 3050 8GB</option>
+                    <option value="gpu3" data-image="GPU/RTX 3060 Ti.png">NVIDIA RTX 3060 Ti 8GB GDDR6</option>
+                    <option value="gpu4" data-image="GPU/RTX 4060.png">NVIDIA RTX 4060 8 GB GDDR6</option>
+                    <option value="gpu5" data-image="GPU/AMD RX 580.png">AMD RX 580 8GB GDDR5</option>
+					<option value="gpu5" data-image="GPU/AMD RX 6600 XT.png">AMD RX 6600 XT 8 GB GDDR6</option>
+					<option value="gpu5" data-image="GPU/Intel Arc B580.png">Intel Arc B580 12GB GDDR6</option>
+					<option value="gpu5" data-image="GPU/NVIDIA RTX 4070 Ti.png">NVIDIA RTX 4070 Ti 12 GB GDDR6X</option>
+					<option value="gpu5" data-image="GPU/NVIDIA RTX 4090.png">NVIDIA RTX 4090 24GB GDDR6X</option>
+					<option value="gpu5" data-image="GPU/NVIDIA RTX 5080.png">NVIDIA RTX 5080 16GB GDDR7</option>
+					
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ram">RAM</label>
+                <select id="ram" name="ram" onchange="updateImage('ram')">
+                    <option value="">Select RAM</option>
+                    <option value="ram1" data-image="RAM/16GB-3200MHz Kingston HyperX Fury_1X.png">1x 16GB-3200MHz Kingston HyperX Fury</option>
+                    <option value="ram2" data-image="RAM/16GB-3200MHz Kingston HyperX Fury.png">2x 16GB-3200MHz Kingston HyperX Fury</option>
+                    <option value="ram3" data-image="RAM/8GB DDR4-3200MHz T-FORCE VULCAN Z.png">1x 8GB DDR4-3200MHz T-FORCE VULCAN Z</option>
+					<option value="ram3" data-image="RAM/8GB DDR4-3200MHz T-FORCE VULCAN Z (red).png">2x 8GB DDR4-3200MHz T-FORCE VULCAN Z (red)</option>
+					<option value="ram3" data-image="RAM/16GB T-FORCE DELTA-R.png">1x 16GB DDR4-3200MHz T-FORCE DELTA-R</option>
+					<option value="ram3" data-image="RAM/16GB DDR4-3200MHz T-FORCE DELTA-R.png">2x 16GB DDR4-3200MHz T-FORCE DELTA-R (32GB TOTAL RAM)</option>
+					<option value="ram3" data-image="RAM/16GB T-FORCE DELTA-R DDR5-5600MHz.png">2x 16GB T-FORCE DELTA-R DDR5-5600MHz(32 GB TOTAL RAM)</option>
+           
+		   </select>
+            </div>
+            <div class="form-group">
+                <label for="storage">Storage</label>
+                <select id="storage" name="storage" onchange="updateImage('storage')">
+                    <option value="">Select Storage</option>
+                    <option value="storage1" data-image="SSDs/PCIE 4.0 KINGSTON 500GB NVME.png">PCIE 4.0 KINGSTON 500GB NVME SSD</option>
+                    <option value="storage2" data-image="SSDs/PCIE 4.0 KINGSTON NVME 1TB.png">PCIE 4.0 KINGSTON 1TB NVME SSD</option>
+                    <option value="storage3" data-image="SSDs/Kingston NVME GEN 3.0 500GB.png">PCIE 3.0 Kingston 500GB NVME SSD</option>
+					<option value="storage3" data-image="SSDs/500GB Samsung 980 pro NVME SSD PCIE 4.0.png">500GB Samsung 980 pro NVME SSD PCIE 4.0</option>
+					<option value="storage3" data-image="SSDs/4TB Samsung 990 pro NVME SSD PCIE 4.0.png">4TB Samsung 990 pro NVME SSD PCIE 4.0</option>
+					<option value="storage3" data-image="SSDs/4TB Crucial P3 Plus NVME SSD PCIE 4.0.png">4TB Crucial P3 Plus NVME SSD PCIE 4.0</option>
+					<option value="storage3" data-image="SSDs/1TB Samsung 980 pro NVME SSD PCIE 4.0.png">1TB Samsung 980 pro NVME SSD PCIE 4.0</option>
+					<option value="storage3" data-image="SSDs/WD 1TB HDD.png">Western Digital 1TB HDD (file storage)</option>
+					<option value="storage3" data-image="SSDs/1TB SEAGATE HDD.png">1TB SEAGATE HDD (file storage)</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Build PC</button>
+        </form>
+        <div id="resultContainer" class="result-container"></div>
+    </div>
+
+    <script>
+        document.getElementById('pcBuilderForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = ''; 
+
+            const components = [
+                { id: 'motherboard', label: 'Motherboard' },
+                { id: 'psu', label: 'PSU' },
+                { id: 'cpu', label: 'CPU' },
+                { id: 'gpu', label: 'GPU' },
+                { id: 'ram', label: 'RAM' },
+                { id: 'storage', label: 'Storage' },
+            ];
+
+            components.forEach(component => {
+                const selectElement = document.getElementById(component.id);
+                const selectedOption = selectElement.options[selectElement.selectedIndex];
+                const title = selectedOption.textContent;
+                const image = selectedOption.getAttribute('data-image');
+
+                if (title && image) {
+                    const componentBox = document.createElement('div');
+                    componentBox.className = 'component-box';
+                    componentBox.innerHTML = `
+                        <img src="${image}" alt="${title}">
+                        <p><strong>${component.label}:</strong> ${title}</p>
+                    `;
+                    resultContainer.appendChild(componentBox);
+                }
+            });
+        });
+    </script>
+	<p align="center">The pc builder is only used to visualize/plan the components you will buy and components prize may vary depending on your location. Thank you.</p>
+</body>
+</html>

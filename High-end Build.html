@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-end Build</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #1e1e1e;
+            background-image: url('images/NVIDIA.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .component {
+            background-color: #1e1e1e;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 10px;
+            border: 2px solid #00eaff; /* Cyan border */
+            box-shadow: 0 0 15px #00eaff; /* Glowing effect */
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .component img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .component hr {
+            border: 1px solid #00eaff;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #00eaff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #252525;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #00eaff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>HIGH-END BUILD</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Services.html">Services</a>
+    </nav>
+    <div class="container">
+        <h2>Component List</h2>
+        
+        <div class="components-grid">
+            <div class="component">
+                <h3>Motherboard: ASRock B550M Pro4</h3>
+                <img src="images/ASUS-B550M.png" alt="ASRock B550M Pro4">
+                <hr>
+                <p>Offers PCIe 4.0 support, solid build quality, and essential connectivity options, making it a reliable and budget-friendly motherboard for a high-end build.</p>
+            </div>
+
+            <div class="component">
+                <h3>AMD Ryzen 7 5800X</h3>
+                <img src="images/RYZEN 7 5800X.png" alt="AMD Ryzen 7 5800X">
+                <hr>
+                <p>The Ryzen 7 5800X provides exceptional multi-core and single-core performance with its 8-core, 16-thread architecture, making it perfect for gaming, content creation, and multitasking in a high-end PC.</p>
+            </div>
+
+            <div class="component">
+                <h3>RTX 4070-SUPER 12GB GDDR6X</h3>
+                <img src="images/RTX4070S.png" alt="RTX 4070-SUPER 12GB GDDR6X">
+                <hr>
+                <p>The RTX 4070 SUPER is a powerful GPU that works great with the Ryzen 7 5800X and PCIe 4.0 SSD, delivering smooth 1440p and 4K gaming while running efficiently on a 750W 80+ Gold PSU and fully supporting the ASRock B550M Pro4 motherboard.</p>
+            </div>
+
+            <div class="component">
+                <h3>32GB-3200MHz TEAM GROUP - T-FORCE VULCAN DDR4 RAM</h3>
+                <img src="images/DDR4_TFORCE.png" alt="32GB-3200MHz TEAM GROUP - T-FORCE VULCAN DDR4 RAM">
+                <hr>
+                <p>The 32GB DDR4-3200MHz T FORCE VULCAN offers ample capacity and reliable speed, ensuring smooth performance for intensive multitasking, gaming, and productivity tasks.</p>
+            </div>
+
+            <div class="component">
+                <h3>2TB Samsung 980 Pro M.2 NVMe SSD | PCIE 4.0</h3>
+                <img src="images/Samsung 980 Pro.png" alt="2TB Samsung 980 Pro M.2 NVMe SSD | PCIE 4.0">
+                <hr>
+                <p>The Samsung 980 Pro provides blazing-fast read/write speeds with PCIe 4.0, ensuring quick system boot times, fast game loading, and efficient handling of large files in a high-end setup.</p>
+            </div>
+
+            <div class="component">
+                <h3>P750GM GIGABYTE PSU | 750W 80 PLUS Gold certified</h3>
+                <img src="images/GIGABYTE750PSU.png" alt="P750GM GIGABYTE PSU | 750W 80 PLUS Gold certified">
+                <hr>
+                <p>The GIGABYTE P750GM 750W PSU offers reliable power delivery with 80+ Gold certification and enough wattage to safely power your high-performance components, ensuring system stability.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
